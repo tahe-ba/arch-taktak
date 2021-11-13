@@ -13,7 +13,7 @@ ssh-add ~/.ssh/id_ed25519
 
 #background picture ~/Pictures/wallpaper.jpg
 
-yay -S bashtop visual-studio-code-bin 
+yay -S bashtop visual-studio-code-bin mkinitcpio-numlock 
 git clone https://github.com/nullgemm/ly.git
 cd ly
 make github
@@ -42,7 +42,7 @@ sudo pacman -Syu sublime-text
 #sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # /etc/mkinitcpio.conf
-#		HOOKS=(base udev resume autodetect modconf block filesystems keyboard)
+#		HOOKS=(base udev resume autodetect numlock modconf block filesystems keyboard)
 # sudo mkinitcpio -p linux
 
 # powertop /etc/systemd/system/powertop.service
