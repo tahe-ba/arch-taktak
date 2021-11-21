@@ -4,6 +4,7 @@ set $ter alacritty
 set $Locker ~/.config/i3/lock
 
 
+
 #font pango:DejaVu Sans Mono 8
 font pango:System San Francisco Display 10
 
@@ -304,9 +305,8 @@ bindsym --release $mod+x exec xkill
 #xrandr --output HDMI-1 --auto --right-of eDP1
 
 #set second monitor res 
-exec_always --no-startup-id xrandr --auto --output eDP1
-exec --no-startup-id xrandr --newmode "1440x1080_60.00"  129.87  1440 1536 1688 1936  1080 1081 1084 1118  -HSync +Vsync ; xrandr --addmode HDMI1 "1440x1080_60.00" ; xrandr --auto --output HDMI1 --mode 1440x1080_60.00 --left-of eDP1
-# exec_always --no-startup-id 
+#exec_always --no-startup-id xrandr --auto --output eDP1
+#exec --no-startup-id xrandr --newmode "1440x1080_60.00"  129.87  1440 1536 1688 1936  1080 1081 1084 1118  -HSync +Vsync ; xrandr --addmode HDMI1 "1440x1080_60.00" ; xrandr --auto --output HDMI1 --mode 1440x1080_60.00 --left-of eDP1
 # exec_always --no-startup-id 
 
 #change corrunt workspase to the other monitor

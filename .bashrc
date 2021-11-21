@@ -33,8 +33,11 @@ else
 fi
 unset color_prompt force_color_prompt
 
-
-alias ls='ls --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+#alias ls='ls --color=auto'
+alias casque='pactl load-module module-switch-on-connect'
 alias ins='sudo pacman-S'
 alias ngtcp='kill -9 `pidof ngrok` ; rm -rf ~/ngrok.log ; ngrok tcp 51029 --log=stdout >> ~/ngrok.log &'
 alias nghttp='kill -9 `pidof ngrok` ; rm -rf ~/ngrok.log ; ngrok http 8080 --log=stdout >> ~/ngrok.log &'
@@ -45,5 +48,9 @@ alias ins='sudo pacman -S '
 alias upd='sudo pacman -Syu'
 alias octopi='/usr/bin/octopi'
 alias p='ping google.com'
+
 #PS1='[\u@\h \W]\$ '
 export PATH="/home/taktak/.local/bin:$PATH"
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors -b)"
+alias ls='ls $LS_OPTIONS'

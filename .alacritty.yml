@@ -10,7 +10,8 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: xterm-256color
+  #TERM: xterm-256color
+  TERM: alacritty
 
 window:
   # Window dimensions (changes require restart)
@@ -214,33 +215,54 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 #default xterm colors
-colors:
-   # Default colors
-   primary:
-     background: '#000000'
-     foreground: '#ffffff'
-   # Normal colors
-   normal:
-     black:   '#000000'
-     red:     '#cd0000'
-     green:   '#00cd00'
-     yellow:  '#cdcd00'
-     blue:    '#0000ee'
-     magenta: '#cd00cd'
-     cyan:    '#00cdcd'
-     white:   '#e5e5e5'
+draw_bold_text_with_bright_colors: true
 
-   # Bright colors
-   bright:
-     black:   '#7f7f7f'
-     red:     '#ff0000'
-     green:   '#00ff00'
-     yellow:  '#ffff00'
-     blue:    '#5c5cff'
-     magenta: '#ff00ff'
-     cyan:    '#00ffff'
-     white:   '#ffffff'
-    
+# Cyberpunk-Neon colours
+colors:
+  # Default colours
+  primary:
+    background: '0x000b1e'
+    foreground: '#FFFFFF'
+
+  # Colors that should be used to draw the terminal cursor. If these are unset,
+  # the cursor colour will be the inverse of the cell colour.
+  # cursor:
+  #   text: '0x2e2e2d'
+  #   # text: '0x000000'
+  #   cursor: '0xffffff'
+
+  # Normal colors
+  normal:
+    black:   '0x123e7c'
+    red:     '0xff0000'
+    green:   '0xd300c4'
+    yellow:  '0xf57800'
+    blue:    '0x123e7c'
+    magenta: '0x711c91'
+    cyan:    '0x0abdc6'
+    white:   '0xd7d7d5'
+
+  # Bright colors
+  bright:
+    black:   '0x1c61c2'
+    red:     '0xff0000'
+    green:   '0xd300c4'
+    yellow:  '0xf57800'
+    blue:    '0x00ff00'
+    magenta: '0x711c91'
+    cyan:    '0x0abdc6'
+    white:   '0xd7d7d5'
+
+  # dim colors
+  dim:
+    black:   '0x1c61c2'
+    red:     '0xff0000'
+    green:   '0xd300c4'
+    yellow:  '0xf57800'
+    blue:    '0x123e7c'
+    magenta: '0x711c91'
+    cyan:    '0x0abdc6'
+    white:   '0xd7d7d5'
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
@@ -271,7 +293,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.85
+background_opacity: 0.7
 # background_opacity: 0.80
 
 #selection:
