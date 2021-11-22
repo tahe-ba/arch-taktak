@@ -3,8 +3,6 @@ set $mod Mod4
 set $ter alacritty
 set $Locker ~/.config/i3/lock
 
-
-
 #font pango:DejaVu Sans Mono 8
 font pango:System San Francisco Display 10
 
@@ -287,7 +285,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 #Keybinding for i3lock
-bindsym $mod+shift+x exec $Locker
+bindsym $mod+Escape exec $Locker
 
 #open browser 
 bindsym $mod+b exec chromium
@@ -307,7 +305,7 @@ bindsym --release $mod+x exec xkill
 #set second monitor res 
 #exec_always --no-startup-id xrandr --auto --output eDP1
 #exec --no-startup-id xrandr --newmode "1440x1080_60.00"  129.87  1440 1536 1688 1936  1080 1081 1084 1118  -HSync +Vsync ; xrandr --addmode HDMI1 "1440x1080_60.00" ; xrandr --auto --output HDMI1 --mode 1440x1080_60.00 --left-of eDP1
-# exec_always --no-startup-id 
+#exec_always --no-startup-id sh /opt/scripts/battery-status.sh &
 
 #change corrunt workspase to the other monitor
 bindsym $mod+p move workspace to output right
