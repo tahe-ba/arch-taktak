@@ -48,6 +48,7 @@ alias ins='sudo pacman -S '
 alias upd='sudo pacman -Syu'
 alias octopi='/usr/bin/octopi'
 alias p='ping google.com'
+alias wifipass='nmcli device wifi show-password'
 
 #PS1='[\u@\h \W]\$ '
 export PATH="/home/taktak/.local/bin:$PATH"
