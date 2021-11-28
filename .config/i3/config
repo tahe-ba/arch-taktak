@@ -130,6 +130,7 @@ for_window [class="Xfce4-taskmanager"] move to workspace $ws9; workspace $ws9
 for_window [class="GParted"] move to workspace $ws9; workspace $ws9
 
 for_window [class="Rhythmbox"] move to workspace $ws10 ; workspace $ws10
+for_window [class="Spotify"] move to workspace $ws10 ; workspace $ws10
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
