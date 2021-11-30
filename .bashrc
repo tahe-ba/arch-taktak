@@ -51,6 +51,14 @@ alias p='ping google.com'
 alias wifipass='nmcli device wifi show-password'
 alias routergateway='ip route show'
 
+fcd(){
+	cd "$(find -type d | fzf)"
+}
+
+op(){
+        xdg-open "$(find -type f | fzf)"
+}
+
 #PS1='[\u@\h \W]\$ '
 export PATH="/home/taktak/.local/bin:$PATH"
 export LS_OPTIONS='--color=auto'
