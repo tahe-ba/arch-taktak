@@ -64,3 +64,8 @@ export PATH="/home/taktak/.local/bin:$PATH"
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
+
+# BEGIN SNIPPET: OVHcloud Web PaaS CLI configuration
+HOME=${HOME:-'/home/taktak'}
+export PATH="$HOME/"'.webpaas-cli/bin':"$PATH"
+if [ -f "$HOME/"'.webpaas-cli/shell-config.rc' ]; then . "$HOME/"'.webpaas-cli/shell-config.rc'; fi # END SNIPPET
