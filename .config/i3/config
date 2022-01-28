@@ -125,6 +125,7 @@ for_window [class="Insomnia"] move to workspace $ws8; workspace $ws8
 for_window [class="PacketTracer"] move to workspace $ws8; workspace $ws8
 for_window [class="Vmware"] move to workspace $ws8; workspace $ws8
 for_window [class="draw.io"] move to workspace $ws8; workspace $ws8
+for_window [class="MongoDB Compass"] move to workspace $ws8; workspace $ws8
 
 for_window [class="octopi"] move to workspace $ws9; workspace $ws9
 for_window [class="Xfce4-taskmanager"] move to workspace $ws9; workspace $ws9
@@ -318,3 +319,5 @@ bindsym $mod+p move workspace to output right
 bindsym $mod + shift + i       exec flameshot full -c
 bindsym $mod + i exec flameshot gui
 
+#start mousepad gesture
+exec --no-startup-id libinput-gestures-setup start
