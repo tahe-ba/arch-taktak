@@ -50,6 +50,7 @@ alias octopi='/usr/bin/octopi'
 alias p='ping google.com'
 alias wifipass='nmcli device wifi show-password'
 alias routergateway='ip route show'
+alias gitlink='git config --get remote.origin.url'
 
 fcd(){
 	cd "$(find -type d | fzf)"
@@ -74,4 +75,6 @@ source /usr/share/nvm/init-nvm.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
