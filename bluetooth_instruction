@@ -1,0 +1,13 @@
+sudo systemctl status bluetooth 
+rfkill unblock bluetooth
+
+bluetoothctl
+power on 
+agent on 
+default-agent
+scan on
+devices 
+trust {:MAC:}
+pair {:MAC:}
+connect {:MAC:}
+
