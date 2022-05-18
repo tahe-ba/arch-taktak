@@ -51,7 +51,7 @@ alias p='ping google.com'
 alias wifipass='nmcli device wifi show-password'
 alias routergateway='ip route show'
 alias gitlink='git config --get remote.origin.url'
-
+alias inside='ssh ubuntu@51.178.136.49'
 fcd(){
 	cd "$(find -type d | fzf)"
 }
@@ -78,3 +78,5 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

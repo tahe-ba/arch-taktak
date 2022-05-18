@@ -93,7 +93,7 @@ bindsym $mod+d focus mode_toggle
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:  Terminal"
 set $ws2 "2:  Web"
-set $ws3 "3:  IDE"
+set $ws3 "3:  Files"
 set $ws4 "4:  VScode"
 set $ws5 "5:  Files GUI"
 set $ws6 "6:  Vlc"
@@ -107,14 +107,16 @@ for_window [class="Alacritty"] move to workspace $ws1 ; workspace $ws1
 
 for_window [class="Chromium"] move to workspace $ws2 ; workspace $ws2
 
-for_window [class="Sublime_text"] move to workspace $ws3; workspace $ws3
-for_window [class="Bootstrap Studio"] move to workspace $ws3; workspace $ws3
-for_window [class="Eclipse"] move to workspace $ws3; workspace $ws3
-for_window [class="Java"] move to workspace $ws3; workspace $ws3
-for_window [class="Codeblocks"] move to workspace $ws3; workspace $ws3
+for_window [class="wps"] move to workspace $ws3; workspace $ws3
+for_window [class="wpp"] move to workspace $ws3; workspace $ws3
+for_window [class="wps"] move to workspace $ws3; workspace $ws3
+for_window [class="et"] move to workspace $ws3; workspace $ws3
+for_window [class="pdf"] move to workspace $ws3; workspace $ws3
 
 for_window [class="Code"] move to workspace $ws4; workspace $ws4
+for_window [class="Sublime_text"] move to workspace $ws4; workspace $ws4
 
+for_window [class="Pcmanfm"] move to workspace $ws5; workspace $ws5
 for_window [class="Thunar"] move to workspace $ws5; workspace $ws5
 
 for_window [class="vlc"] move to workspace $ws6; workspace $ws6
@@ -123,19 +125,17 @@ for_window [class="Zulip"] move to workspace $ws7; workspace $ws7
 for_window [class="notion-app"] move to workspace $ws7; workspace $ws7
 for_window [class="discord"] move to workspace $ws7; workspace $ws7
 
-for_window [class="PacketTracer"] move to workspace $ws8; workspace $ws8
-for_window [class="Vmware"] move to workspace $ws8; workspace $ws8
-for_window [class="draw.io"] move to workspace $ws8; workspace $ws8
 for_window [class="MongoDB Compass"] move to workspace $ws8; workspace $ws8
 
 for_window [class="octopi"] move to workspace $ws9; workspace $ws9
+for_window [class="Pavucontrol"] move to workspace $ws9; workspace $ws9
+for_window [class="Seafile Client"] move to workspace $ws9; workspace $ws9
 for_window [class="Xfce4-taskmanager"] move to workspace $ws9; workspace $ws9
 for_window [class="GParted"] move to workspace $ws9; workspace $ws9
 for_window [class="Postman"] move to workspace $ws9; workspace $ws9 
 for_window [class="Insomnia"] move to workspace $ws9; workspace $ws9
 
 for_window [class="Rhythmbox"] move to workspace $ws10 ; workspace $ws10
-for_window [class="Spotify"] move to workspace $ws10 ; workspace $ws10
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -268,7 +268,7 @@ exec $ter
 
 #screensaver 
 #exec_always xautolock -time 20 -locker "~/.config/i3/lock"
-exec_always xautolock -detectsleep -time 5 -locker $saver
+exec_always xautolock -detectsleep -time 20 -locker $saver
 
 #wallpaper
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
@@ -280,7 +280,7 @@ exec_always numlockx
 #####################################################################
 
 #thunrar keybind
-bindsym $mod+g exec thunar
+bindsym $mod+g exec pcmanfm
 
 # Alt tab workspace switching
 bindsym $mod+z exec i3-msg "workspace next_on_output"
