@@ -1,0 +1,4 @@
+# libinput-list-devices  
+# xinput list-props "Elan Touchpad"  
+# Enable tap-click  
+xinput set-prop "Elan Touchpad" "libinput Tapping Enabled" 1  
